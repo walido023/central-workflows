@@ -1,4 +1,4 @@
-name: Application CI
+name: Pipeline CD
 on: [push, pull_request]
 jobs:
   test-auth-wfi:
