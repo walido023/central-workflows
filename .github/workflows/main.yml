@@ -29,3 +29,11 @@ jobs:
           gcloud config list
           gcloud config configurations list
           gcloud run services list
+      - id: 'deploy'
+        uses: 'google-github-actions/deploy-cloudrun@v1'
+        with:
+          service: 'hello-cloud-run'
+          image: 'gcr.io/cloudrun/hello'
+
+      - name: 'Use output'
+        run: 'curl "${{ steps.deploy.outputs.url }}"' 
