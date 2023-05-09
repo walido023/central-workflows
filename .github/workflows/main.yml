@@ -31,5 +31,7 @@ jobs:
         with:
           service: 'hello-cloud-run'
           image: 'us-docker.pkg.dev/cloudrun/container/hello:latest'
+          region: 'europe-west9'
+          flags: '--allow-unauthenticated'
       - name: 'Use output'
         run: 'curl "${{ steps.deploy.outputs.url }}"'
