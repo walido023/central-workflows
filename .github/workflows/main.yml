@@ -30,6 +30,6 @@ jobs:
         uses: 'google-github-actions/deploy-cloudrun@v1'
         with:
           service: 'hello-cloud-run'
-          image: 'gcr.io/cloudrun/hello'
+          image: 'us-docker.pkg.dev/cloudrun/container/hello:latest'
       - name: 'Use output'
         run: 'curl "${{ steps.deploy.outputs.url }}"'
