@@ -1,7 +1,7 @@
 name: Pipeline CD
 on: [push, pull_request]
 jobs:
-  pipeline CD:
+  pipeline_cd:
     name: "Default CD pipeline"
     runs-on: ubuntu-latest
     timeout-minutes: 90
